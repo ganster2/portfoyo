@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nurmuhammad | Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #ffffff);
+      color: #333;
+      line-height: 1.6;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    header {
+      background: rgba(0, 122, 204, 0.8);
+      color: white;
+      padding: 20px 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 3rem;
+    }
+
+    .language-selector {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .language-selector select {
+      font-size: 16px;
+      padding: 5px 10px;
+      background-color: #007acc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      color: #007acc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f1f1f1;
+      color: #555;
+      margin-top: 50px;
+    }
+
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .background-animation {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      animation: backgroundMove 10s ease-in-out infinite;
+    }
+
+    @keyframes backgroundMove {
+      0% {
+        background: url('anime_background1.jpg') no-repeat center center/cover;
+      }
+      50% {
+        background: url('anime_background2.jpg') no-repeat center center/cover;
+      }
+      100% {
+        background: url('anime_background3.jpg') no-repeat center center/cover;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="background-animation"></div>
+
+  <header>
+    <h1 id="header-title">Nurmuhammad</h1>
+    <p id="header-description">Full-Stack Developer (learning)</p>
+
+    <!-- Tilni tanlash menyusi -->
+    <div class="language-selector">
+      <select id="language-selector" onchange="changeLanguage()">
+        <option value="en">English</option>
+        <option value="uz">O'zbek</option>
+        <option value="ru">Русский</option>
+        <option value="ja">日本語</option>
+      </select>
+    </div>
+  </header>
+
+  <section>
+    <h2 id="about-title">Hello!</h2>
+    <p id="about-description">I am a Full-Stack Developer learning web development, Telegram bots, 2D games, audio/video editing, and AI integration.</p>
+
+    <h2 id="skills-title">Key Skills</h2>
+    <ul>
+      <li>Frontend: HTML, CSS, JavaScript</li>
+      <li>Backend: Python, Django, Django REST</li>
+      <li>Database: PostgreSQL, MySQL</li>
+      <li>Telegram bots, Pygame 2D games</li>
+      <li>Audio editing (Reaper), video editing</li>
+      <li>AI: ChatGPT, DALL·E, TTS, etc.</li>
+    </ul>
+
+    <h2 id="projects-title">Projects</h2>
+    <p id="projects-description">Some of my projects are offline. However, you can find them on my GitHub page:</p>
+    <p><a href="https://github.com/ganster2" target="_blank">github.com/ganster2</a></p>
+
+    <h2 id="contact-title">Contact</h2>
+    <p id="email-title">Email: <a href="mailto:soya200509@gmail.com">soya200509@gmail.com</a></p>
+    <p id="upwork-title">Upwork: <a href="https://www.upwork.com/freelancers/~0197f2feb2b61697d4" target="_blank">Upwork Profile</a></p>
+    <p id="telegram-title">Telegram: <a href="https://t.me/The_Shadow05" target="_blank">@The_Shadow05</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Nurmuhammad</p>
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        "header-title": "Nurmuhammad",
+        "header-description": "Full-Stack Developer (learning)",
+        "about-title": "Hello!",
+        "about-description": "I am a Full-Stack Developer learning web development, Telegram bots, 2D games, audio/video editing, and AI integration.",
+        "skills-title": "Key Skills",
+        "projects-title": "Projects",
+        "projects-description": "Some of my projects are offline. However, you can find them on my GitHub page:",
+        "contact-title": "Contact",
+        "email-title": "Email: <a href='mailto:soya200509@gmail.com'>soya200509@gmail.com</a>",
+        "upwork-title": "Upwork: <a href='https://www.upwork.com/freelancers/~0197f2feb2b61697d4' target='_blank'>Upwork Profile</a>",
+        "telegram-title": "Telegram: <a href='https://t.me/The_Shadow05' target='_blank'>@The_Shadow05</a>"
+      },
+      uz: {
+        "header-title": "Nurmuhammad",
+        "header-description": "Full-Stack Dasturchi (o'rganishda davom etyapman)",
+        "about-title": "Salom!",
+        "about-description": "Men web dasturlash, Telegram botlar, 2D o‘yinlar, audio/video montaj va AI bilan ishlashni o‘rganayotgan dasturchiman.",
+        "skills-title": "Asosiy ko‘nikmalarim",
+        "projects-title": "Loyihalar",
+        "projects-description": "Ayrim loyihalarim hozircha oflayn — kompyuterimda. Biroq ba'zilarini quyidagi GitHub sahifamda topishingiz mumkin:",
+        "contact-title": "Aloqa",
+        "email-title": "Email: <a href='mailto:soya200509@gmail.com'>soya200509@gmail.com</a>",
+        "upwork-title": "Upwork: <a href='https://www.upwork.com/freelancers/~0197f2feb2b61697d4' target='_blank'>Upwork Profilim</a>",
+        "telegram-title": "Telegram: <a href='https://t.me/The_Shadow05' target='_blank'>@The_Shadow05</a>"
+      },
+      ru: {
+        "header-title": "Нурмухаммад",
+        "header-description": "Full-Stack разработчик (учусь)",
+        "about-title": "Привет!",
+        "about-description": "Я Full-Stack разработчик, изучаю веб-разработку, Telegram боты, 2D игры, редактирование аудио/видео и интеграцию ИИ.",
+        "skills-title": "Основные навыки",
+        "projects-title": "Проекты",
+        "projects-description": "Некоторые из моих проектов находятся офлайн. Однако вы можете найти их на моей странице GitHub:",
+        "contact-title": "Контакт",
+        "email-title": "Email: <a href='mailto:soya200509@gmail.com'>soya200509@gmail.com</a>",
+        "upwork-title": "Upwork: <a href='https://www.upwork.com/freelancers/~0197f2feb2b61697d4' target='_blank'>Профиль Upwork</a>",
+        "telegram-title": "Telegram: <a href='https://t.me/The_Shadow05' target='_blank'>@The_Shadow05</a>"
+      },
+      ja: {
+        "header-title": "ヌルムハマッド",
+        "header-description": "フルスタック開発者（学習中）",
+        "about-title": "こんにちは!",
+        "about-description": "私はフルスタック開発者で、Web開発、Telegramボット、2Dゲーム、音声/ビデオ編集、AI統合を学んでいます。",
+        "skills-title": "主なスキル",
+        "projects-title": "プロジェクト",
+        "projects-description": "私のいくつかのプロジェクトはオフラインですが、GitHubページで見つけることができます:",
+        "contact-title": "連絡先",
+        "email-title": "Email: <a href='mailto:soya200509@gmail.com'>soya200509@gmail.com</a>",
+        "upwork-title": "Upwork: <a href='https://www.upwork.com/freelancers/~0197f2feb2b61697d4' target='_blank'>Upworkプロフィール</a>",
+        "telegram-title": "Telegram: <a href='https://t.me/The_Shadow05' target='_blank'>@The_Shadow05</a>"
+      }
+    };
+
+    function changeLanguage() {
+      const lang = document.getElementById('language-selector').value;
+      const translation = translations[lang];
+
+      for (const key in translation) {
+        if (translation.hasOwnProperty(key)) {
+          document.getElementById(key).innerHTML = translation[key];
+        }
+      }
+    }
+  </script>
+</body>
+</html>
